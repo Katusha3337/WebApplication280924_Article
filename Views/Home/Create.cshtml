@@ -1,0 +1,22 @@
+﻿@model Article
+
+<h2>Создать новую статью</h2>
+
+@using (Html.BeginForm())
+{
+    <div>
+        <label for="Title">Заголовок</label>
+        @Html.TextBoxFor(model => model.Title)
+    </div>
+    <div>
+        <label for="Summary">Краткое описание</label>
+        @Html.TextBoxFor(model => model.Summary)
+    </div>
+    <div>
+        <label for="PublishDate">Дата публикации</label>
+        @Html.TextBoxFor(model => model.PublishDate, "{0:yyyy-MM-dd}")
+    </div>
+    <div>
+        <input type="submit" value="Создать" />
+    </div>
+}

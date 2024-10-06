@@ -1,0 +1,14 @@
+﻿@model List<Article>
+
+<h2>Список статей</h2>
+
+@foreach (var article in Model)
+{
+    <div>
+        <h3>@Html.DisplayFor(modelItem => article.Title)</h3>
+        <p>@Html.DisplayFor(modelItem => article.Summary)</p>
+        <p>Дата публикации: @Html.DisplayFor(modelItem => article.PublishDate)</p>
+    </div>
+}
+
+<a href="/Home/Create">Добавить новую статью</a>
